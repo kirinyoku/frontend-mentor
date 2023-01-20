@@ -1,4 +1,4 @@
-# Preview: kirinyoku/frontend-mentor-faq-accordion-card
+# Preview: https://vercel.com/kirinyoku/faq-according-card-main
 
 # Frontend Mentor - REST Countries API with color theme switcher
 
