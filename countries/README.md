@@ -1,6 +1,6 @@
-# Preview: https://vercel.com/kirinyoku/faq-according-card-main
-
 # Frontend Mentor - REST Countries API with color theme switcher
+
+## Preview: https://vercel.com/kirinyoku/faq-according-card-main
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
 
