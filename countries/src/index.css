@@ -1,0 +1,39 @@
+@import-normalize;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --family: 'Nunito Sans', sans-serif;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fw-light: 400;
+  --fw-normal: 500;
+  --fw-bold: 700;
+
+  --radius: .5rem;
+}
+
+body[data-theme='light'] {
+  --text-color: hsl(200, 15%, 8%); 
+  --bg-color: hsl(0, 0%, 98%);
+  --ui-color: hsl(0, 0%, 100%);
+  --shadow: 0px 0px 24px rgba(149, 157, 165, 0.2);    
+}
+
+body[data-theme='dark'] {
+  --text-color: hsl(0, 0%, 100%);
+  --bg-color: hsl(207, 26%, 17%);
+  --ui-color: hsl(209, 23%, 22%); 
+  --shadow: 0px 0px 8px rgba(245, 245, 245, 0.2);    
+}
+
+body {
+  margin: 0;
+  font-family: var(--family);
+  font-weight: var(--fw-light);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
