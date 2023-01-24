@@ -3,77 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frontend Mentor | [Challenge Name Here]</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <link rel="stylesheet" href="./dist/style.css">
+  <title>Frontend Mentor | Dashboard</title>
 </head>
 <body>
+  <!-- PRIMARY HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="grid-parent">
+        <div class="header__content">
+          <h1 class="header__title">Social Media Dashboard</h1>
+          <p class="header__subtitle">Total Followers: 23,004</p>
+        </div>
+        <div class="header__toggle flex-parent" role="toolbar">
+          <span aria-hidden="true">Dark Mode</span>
+          <fieldset aria-label="theme switcher" role="radiogroup">
+            <div class="toggle">
+              <label class="sr-only" for="radio-dark">Dark Mode</label>
+              <label class="sr-only" for="radio-light">Light Mode</label>
+              <div class="toggle__wrapper">
+                <input type="radio" name="theme" id="radio-dark">
+                <input type="radio" name="theme" id="radio-light" >
+                <span aria-hidden="true" class="toggle__bg"></span>
+                <span aria-hidden="true" class="toggle__switcher"></span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <header id="header"></header>
-  <main id="main">
-
+  <main class="main">
+    <!-- FOLLOWERS STATS -->
+    <section aria-label="followers statistics">
+      <div class="container">
+        <ul class="even-columns" aria-label="social media platforms">
+          <li class="card card--facebook" aria-label="Facebook">
+            <div class="card__platform">
+              <img class="card__icon" src="./images/icon-facebook.svg" alt="facebook icon">
+              <span class="card__username">@nathanf</span>
+            </div>
+            <div class="card__followers">
+              <div class="card__count">1987</div>
+              <div class="card__title">Followers</div>
+            </div>
+            <div class="card__change card__change--positive">12 Today</div>
+          </li>
+          <li class="card card--twitter" aria-label="Twitter">
+            <div class="card__platform">
+              <img class="card__icon" src="./images/icon-twitter.svg" alt="twitter icon">
+              <span class="card__username">@nathanf</span>
+            </div>
+            <div class="card__followers">
+              <div class="card__count">1044</div>
+              <div class="card__title">Followers</div>
+            </div>
+            <div class="card__change card__change--positive">99 Today</div>
+          </li>
+          <li class="card card--instagram" aria-label="Instagram">
+            <div class="card__platform">
+              <img class="card__icon" src="./images/icon-instagram.svg" alt="instagram icon">
+              <span class="card__username">@realnathanf</span>
+            </div>
+            <div class="card__followers">
+              <div class="card__count">11k</div>
+              <div class="card__title">Followers</div>
+            </div>
+            <div class="card__change card__change--positive">1099 Today</div>
+          </li>
+          <li class="card card--youtube" aria-label="YouTube">
+            <div class="card__platform">
+              <img class="card__icon" src="./images/icon-youtube.svg" alt="youtube icon">
+              <span class="card__username">Nathan F.</span>
+            </div>
+            <div class="card__followers">
+              <div class="card__count">8239</div>
+              <div class="card__title">Followers</div>
+            </div>
+            <div class="card__change card__change--negative">144 Today</div>
+          </li>
+        </ul> 
+      </div>
+    </section>
+    <!-- ACTIVITY STATS -->
+    <section aria-label="activity statistics">
+      <div class="container">
+        <h2>Overview - Today</h2>
+        <ul class="even-columns" aria-label="social media platforms">
+          <li class="card--sm" aria-label="Facebook">
+            <div class="card__subtitle">Page Views</div>
+            <img src="./images/icon-facebook.svg" alt="facebook icon">
+            <div class="card__count--sm">87</div>
+            <div class="card__change--positive">3%</div>
+          </li>
+          <li class="card--sm" aria-label="Facebook">
+            <div class="card__subtitle">Likes</div>
+            <img src="./images/icon-facebook.svg" alt="facebook icon">
+            <div class="card__count--sm">52</div>
+            <div class="card__change--negative">2%</div>
+          </li>
+          <li class="card--sm" aria-label="Instagram">
+            <div class="card__subtitle">Likes</div>
+            <img src="./images/icon-instagram.svg" alt="instagram icon">
+            <div class="card__count--sm">5462</div>
+            <div class="card__change--positive">2257%</div>
+          </li>
+          <li class="card--sm" aria-label="Instagram">
+            <div class="card__subtitle">Profile Views</div>
+            <img src="./images/icon-instagram.svg" alt="instagram icon">
+            <div class="card__count--sm">52k</div>
+            <div class="card__change--positive">1375%</div>
+          </li>
+          <li class="card--sm" aria-label="Twitter">
+            <div class="card__subtitle">Retweets</div>
+            <img src="./images/icon-twitter.svg" alt="twitter icon">
+            <div class="card__count--sm">117</div>
+            <div class="card__change--positive">303%</div>
+          </li>
+          <li class="card--sm" aria-label="Twitter">
+            <div class="card__subtitle">Likes</div>
+            <img src="./images/icon-twitter.svg" alt="twitter icon">
+            <div class="card__count--sm">507</div>
+            <div class="card__change--positive">553%</div>
+          </li>
+          <li class="card--sm" aria-label="YouTube">
+            <div class="card__subtitle">Likes</div>
+            <img src="./images/icon-youtube.svg" alt="youTube icon">
+            <div class="card__count--sm">107</div>
+            <div class="card__change--negative">19%</div>
+          </li>
+          <li class="card--sm" aria-label="YouTube">
+            <div class="card__subtitle">Total Views</div>
+            <img src="./images/icon-youtube.svg" alt="youTube icon">
+            <div class="card__count--sm">1407</div>
+            <div class="card__change--negative">12%</div>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
-  <!-- Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12% -->
+  <!-- js script -->
+  <script src="./dist/script.js"></script>
 </body>
 </html>

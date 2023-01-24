@@ -1,0 +1,28 @@
+@use '../util/' as *;
+
+.header {
+  margin: rem(30) 0;
+
+  @include breakpoint(medium) {
+    margin: rem(40) 0;
+  }
+
+  &__content {
+    padding-bottom: rem(14);
+    border-bottom: rem(1) solid var(--toggle-bg-light);
+
+    @include breakpoint(medium) {
+      padding: 0;
+      border: none;
+    }
+  }
+
+  &__toggle {
+    span {
+      font-weight: 700;
+      color: var(--text-clr-primary);
+    }
+  }
+
+}
+

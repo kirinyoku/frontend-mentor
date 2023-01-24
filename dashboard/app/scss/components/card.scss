@@ -1,0 +1,129 @@
+@use '../util/' as *;
+
+.card {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  text-align: center;
+  gap: rem(30);
+  padding: rem(26) 0;
+  border-radius: rem(5);
+  background-color: var(--card-bg);
+  transition: all 150ms linear;
+
+  &:is(:hover, :focus-visible) {
+    background-color: var(--card-hover);
+    cursor: pointer;
+  }
+
+  &__platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(12);
+  }
+
+  &__username {
+    font-size: rem(12);
+    font-weight: 700;
+    color: var(--text-clr-primary);
+  }
+
+  &__count {
+    font-size: rem(56);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: rem(-2);
+    margin-bottom: rem(4);
+    color: var(--text-clr-secondary);
+
+    &--sm {
+      @extend .card__count;
+      font-size: rem(32);
+    }
+  }
+
+  &__title {
+    font-size: rem(12);
+    letter-spacing: rem(5);
+    text-transform: uppercase;
+    color: var(--text-clr-primary);
+  }
+
+  &__change {
+
+    font-size: rem(12);
+    font-weight: 700;
+    
+    &--positive {
+      color: var(--limegreen);
+      &::before {
+        content: url(../../../images/icon-up.svg);
+        font-size: rem(4);
+        vertical-align: middle;
+        margin-right: rem(4);
+      }
+    }
+    &--negative {
+      color: var(--brightred);
+      &::before {
+        content: url(../../../images/icon-down.svg);
+        font-size: rem(4);
+        vertical-align: middle;
+        margin-right: rem(4);
+      }
+    }
+  }
+
+  &--facebook {
+    border-top: rem(5) solid var(--facebook);
+  }
+
+  &--twitter {
+    border-top: rem(5) solid var(--twitter);
+  }
+
+  &--instagram::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rem(5);
+    background: linear-gradient(
+      225deg,
+      var(--instagram-end),
+      var(--instagram-middle) 50.91%,
+      var(--instagram-start) 100%
+    )
+  }
+
+  &--youtube {
+    border-top: rem(5) solid var(--youtube);
+  }
+
+  &--sm {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-between;
+    justify-items: start;
+    text-align: center;
+    row-gap: rem(24);
+    padding: rem(25);
+    border-radius: rem(5);
+    background-color: var(--card-bg);
+    transition: all 150ms linear;
+
+    & > *:nth-child(even) {
+      align-self: center;
+      justify-self: end;
+    }
+
+    &:is(:hover, :focus-visible) {
+      cursor: pointer;
+      background-color: var(--card-hover);
+    }
+  }
+}
