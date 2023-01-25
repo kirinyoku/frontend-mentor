@@ -1,0 +1,33 @@
+@use '../util/' as *;
+
+h1, 
+h2, 
+h3 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 700;
+  color: $text-secondary;
+}
+
+h1 {
+  font-size: clamp(rem(40), rem(16) + 10vw, rem(88));
+}
+
+h2 {
+  font-size: clamp(rem(40), rem(16) + 10vw, rem(88));
+}
+
+h3 {
+  font-size: rem(24);
+}
+
+p {
+  margin: 0;
+  color: $text-primary;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
