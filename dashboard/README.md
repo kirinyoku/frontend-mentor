@@ -1,5 +1,7 @@
 # Frontend Mentor - Social media dashboard with theme switcher
 
+## Preview: https://dashboard-delta-gilt.vercel.app
+
 ![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋

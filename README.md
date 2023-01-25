@@ -1,1 +1,1 @@
-# Frontend Mentor: https://www.frontendmentor.io
+# Frontend Mentor Profile: https://www.frontendmentor.io/profile/kirinyoku
