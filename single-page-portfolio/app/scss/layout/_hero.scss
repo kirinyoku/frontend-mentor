@@ -1,0 +1,85 @@
+@use '../util/' as *;
+
+.hero {
+
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: rem(20);
+  padding-bottom: rem(40);
+
+  &__content {
+    display: grid;
+    gap: rem(20);
+    justify-items: center;
+  }
+
+  @include breakpoint(medium) {
+
+    grid-template-areas: 'content photo';
+    text-align: left;
+
+    &__content {
+      grid-area: content;
+      justify-items: start;
+      gap: rem(40);
+    }
+
+    &__title {
+      width: max(120%, 10ch);
+    }
+
+    &__subtitle {
+      max-width: 35ch;
+    }
+
+  }
+
+  &__image {
+    width: rem(175);
+    position: relative;
+    grid-area: photo;
+    margin-top: rem(-93);
+    z-index: -2;
+
+    @include breakpoint(medium) {
+      width: rem(322);
+    }
+
+    @include breakpoint(large) {
+      width: rem(450);
+    }
+  }
+
+  &__title {
+    span {
+      display: inline-block;
+      border-bottom: rem(6) solid $clr-neutral-400;
+    }
+  }
+
+  &::before {
+    content: url('../../../images/pattern-rings.be49833a.svg');
+    position: absolute;
+    top: 10%;
+    left: rem(-265);
+    z-index: -3;
+  }
+
+  &::after {
+    content: url('../../../images/pattern-circle.ad1ffe0a.svg');
+    position: absolute;
+    bottom: 50%;
+    right: rem(-100);
+    z-index: -1;
+
+    @include breakpoint(medium) {
+      bottom: 0;
+    }
+
+    @include breakpoint(large) {
+      bottom: 10%;
+      right: 35%;
+    }
+  }
+}

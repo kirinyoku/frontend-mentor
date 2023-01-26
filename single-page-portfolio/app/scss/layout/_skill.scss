@@ -1,0 +1,51 @@
+@use '../util/' as *;
+
+.skill {
+  padding: rem(40) 0;
+  border-block: 1px solid $clr-primary-100;
+
+  @include breakpoint(medium) {
+    border-bottom: none;
+  }
+
+  &__list {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: rem(24);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: start;
+      text-align: left;
+      row-gap: rem(40);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__name {
+    color: $clr-primary-100;
+    font-size: rem(32);
+    padding-bottom: rem(10);
+
+    @include breakpoint(medium) {
+      font-size: rem(48);
+    }
+  }
+
+  &__experience {
+    @include breakpoint(medium) {
+      font-size: rem(18);
+    }
+  }
+
+  &::before {
+    content: url('../../../images/pattern-rings.be49833a.svg');
+    position: absolute;
+    right: rem(-380);
+    bottom: 0;
+  }
+}

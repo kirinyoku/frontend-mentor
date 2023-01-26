@@ -11,6 +11,81 @@
   <title>Frontend Mentor | Portfolio</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <!-- HEADER -->
+  <header class="header container">
+    <h1 class="header__title">adamkeyes</h1>
+    <ul class="header__social-list" aria-label="social media links">
+      <li>
+        <a href="#" aria-label="github">
+          <svg class="icon">
+            <use xlink:href="./images/social-links.svg#github"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="frontend mentor">
+          <svg class="icon">
+            <use xlink:href="./images/social-links.svg#frontend-mentor"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="linkedin">
+          <svg class="icon">
+            <use xlink:href="./images/social-links.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" aria-label="twitter">
+          <svg class="icon">
+            <use xlink:href="./images/social-links.svg#twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+  <!-- HERO -->
+  <section class="hero container">
+    <picture>
+      <source srcset="./images/image-profile-desktop.dcfdb62e.webp" media="(min-width: 1024px)">
+      <source srcset="./images/image-profile-tablet.77d7015b.webp" media="(min-width: 640px)">
+      <img class="hero__image" src="./images/image-profile-mobile.76cbef2c.webp" alt="profile picture">
+    </picture>
+    <div class="hero__content">
+      <h2 class="hero__title">Nice to meet you! I'm <span>Adam Keyes</span></h2>
+      <p class="hero__subtitle">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
+      <a href="#" class="hero__button button" role="button">contact me</a>  
+    </div>
+  </section>
+  <!-- SKILL -->
+  <section class="skill container" aria-label="skill">
+    <ul class="skill__list" aria-label="skill list">
+      <li>
+        <span class="skill__name">HTML</span>
+        <p class="skill__experience">4 Years Experience</p>
+      </li>
+      <li>
+        <span class="skill__name">CSS</span>
+        <p class="skill__experience">4 Years Experience</p>
+      </li>
+      <li>
+        <span class="skill__name">JavaScript</span>
+        <p class="skill__experience">4 Years Experience</p>
+      </li>
+      <li>
+        <span class="skill__name">Accessibility</span>
+        <p class="skill__experience">4 Years Experience</p>
+      </li>
+      <li>
+        <span class="skill__name">React</span>
+        <p class="skill__experience">3 Years Experience</p>
+      </li>
+      <li>
+        <span class="skill__name">Sass</span>
+        <p class="skill__experience">3 Years Experience</p>
+      </li>
+    </ul>
+  </section>
 </body>
 </html>

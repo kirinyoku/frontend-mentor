@@ -1,0 +1,30 @@
+@use '../util/' as *;
+
+.header {
+  display: grid;
+  place-items: center;
+  gap: rem(20);
+  padding-top: rem(20);
+
+  @include breakpoint(medium) {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding-top: rem(40);
+  }
+
+  &__social-list {
+    display: flex;
+    gap: rem(20);
+    margin-right: rem(30);
+  }
+
+  .icon {
+    height: rem(24);
+    width: rem(24);
+    fill: $clr-primary-100;
+
+    &:is(:hover, :focus-visible) {
+      fill: $clr-neutral-400;
+    }
+  }
+}
