@@ -1,6 +1,6 @@
 @use '../util/' as *;
 
-.header {
+.navigation {
   display: grid;
   place-items: center;
   gap: rem(20);
@@ -12,10 +12,18 @@
     padding-top: rem(40);
   }
 
+  &__title {
+    color: $text-secondary;
+    font-size: clamp(rem(24), rem(16) + 1.5vw, rem(32));
+  }
+
   &__social-list {
     display: flex;
     gap: rem(20);
-    margin-right: rem(30);
+    
+    @include breakpoint(medium) {
+      margin-right: rem(30);
+    }
   }
 
   .icon {

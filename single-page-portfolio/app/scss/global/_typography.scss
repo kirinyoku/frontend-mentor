@@ -9,11 +9,8 @@ h3 {
   color: $text-secondary;
 }
 
-h1 {
-  font-size: clamp(rem(24), rem(16) + 1.5vw, rem(32));
-}
 
-h2 {
+h1, h2 {
   font-size: rem(40);
   letter-spacing: rem(-2.5);
   

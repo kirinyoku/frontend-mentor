@@ -2,6 +2,7 @@
 
 .skill {
   padding: rem(40) 0;
+  margin-bottom: rem(50);
   border-block: 1px solid $clr-primary-100;
 
   @include breakpoint(medium) {

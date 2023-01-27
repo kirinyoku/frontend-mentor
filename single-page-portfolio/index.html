@@ -12,38 +12,40 @@
 </head>
 <body>
   <!-- HEADER -->
-  <header class="header container">
-    <h1 class="header__title">adamkeyes</h1>
-    <ul class="header__social-list" aria-label="social media links">
-      <li>
-        <a href="#" aria-label="github">
-          <svg class="icon">
-            <use xlink:href="./images/social-links.svg#github"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="frontend mentor">
-          <svg class="icon">
-            <use xlink:href="./images/social-links.svg#frontend-mentor"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="linkedin">
-          <svg class="icon">
-            <use xlink:href="./images/social-links.svg#linkedin"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" aria-label="twitter">
-          <svg class="icon">
-            <use xlink:href="./images/social-links.svg#twitter"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+  <header>
+    <nav class="navigation container">
+      <span class="navigation__title">adamkeyes</span>
+      <ul class="navigation__social-list" aria-label="social media links">
+        <li>
+          <a href="#" aria-label="github">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="frontend mentor">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#frontend-mentor"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="linkedin">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="twitter">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!-- HERO -->
   <section class="hero container">
@@ -53,9 +55,9 @@
       <img class="hero__image" src="./images/image-profile-mobile.76cbef2c.webp" alt="profile picture">
     </picture>
     <div class="hero__content">
-      <h2 class="hero__title">Nice to meet you! I'm <span>Adam Keyes</span></h2>
+      <h1 class="hero__title">Nice to meet you! I'm <span>Adam Keyes</span></h1>
       <p class="hero__subtitle">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
-      <a href="#" class="hero__button button" role="button">contact me</a>  
+      <a href="#contact" class="hero__button button" role="button">contact me</a>  
     </div>
   </section>
   <!-- SKILL -->
@@ -87,5 +89,191 @@
       </li>
     </ul>
   </section>
+  <!-- PROJECTS -->
+  <section class="projects container" aria-label="projects">
+    <div class="projects__heading">
+      <h2>Projects</h2>
+      <a href="#contact" class="button" role="button">contact me</a>  
+    </div>
+    <ul class="projects__list" aria-label="projects list">
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-1-large.6881f593.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-1-small.101f0206.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">Design portfolio</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-2-large.e3f22574.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-2-small.28072718.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">E-learning landing page</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-3-large.29425e1f.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-3-small.1ee882fd.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">Todo web app</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-4-large.adca04e9.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-4-small.8d6102b1.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">Entertainment web app</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-5-large.f980b5ee.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-5-small.657a3411.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">Memory Game</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+      <li>
+        <picture class="projects__picture">
+          <source srcset="./images/thumbnail-project-6-large.401e51d9.webp" media="(min-width: 1024px)">
+          <img class="projects__thumbnail" src="./images/thumbnail-project-6-small.9d362b79.webp" alt="project thumbnail">
+          <div class="projects__buttons--thumbnail">
+            <a href="#" class="button" role="button">view project</a>
+            <a href="#" class="button" role="button">view code</a> 
+          </div>
+        </picture>
+        <h3 class="projects__title">Art gallery</h3>
+        <ul class="projects__skills-list" aria-label="projects skills list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+        <div class="projects__buttons">
+          <a href="#" class="button" role="button">view project</a>
+          <a href="#" class="button" role="button">view code</a> 
+        </div>
+      </li>
+    </ul>
+  </section>
+  <footer class="footer">
+    <div class="footer__grid container">
+      <div class="footer__content">
+        <h2 class="footer__title">Contact</h2>
+        <p class="footer__subtitle">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+      </div>
+      <form class="footer__form" action="#" id="contact">
+        <div>
+          <label for="name" class="sr-only">enter your name (reqiured)</label>
+          <input type="text" name="name" id="name" placeholder="name" required>
+          <p class="error">Please fill out this field</p>
+        </div>
+        <div>
+          <label for="email" class="sr-only">enter your email (reqiured)</label>
+          <input type="email" name="email" id="email" placeholder="email" required>
+          <p class="error">Please fill out this field</p>
+        </div>
+        <div>
+          <label for="message" class="sr-only">enter your message (reqiured)</label>
+          <textarea name="message" id="message" placeholder="message" rows="1" required></textarea>
+          <p class="error">Please fill out this field</p>
+        </div>
+        <button class="button" type="submit">send message</button>
+      </form>
+    </div>
+    <nav class="navigation container">
+      <span class="navigation__title">adamkeyes</span>
+      <ul class="navigation__social-list" aria-label="social media links" style="margin: 0;">
+        <li>
+          <a href="#" aria-label="github">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#github"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="frontend mentor">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#frontend-mentor"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="linkedin">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#linkedin"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="twitter">
+            <svg class="icon">
+              <use xlink:href="./images/social-links.svg#twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </body>
 </html>
