@@ -4,7 +4,7 @@
   background-color: $bg-alt;
   padding-bottom: rem(30);
 
-  &__grid {
+  &__contact {
     display: grid;
     padding-block: rem(50);
     border-bottom: 1px solid $clr-primary-100;
@@ -55,14 +55,14 @@
         border-color: $clr-neutral-400;
       }
 
-      &:invalid {
+      &:focus:invalid {
         background-image: url('../../../images/icon-error.svg');
         background-repeat: no-repeat;
         background-position: 100% 0;
         border-color: $error;
       }
 
-      &:invalid ~ .error{
+      &:focus:invalid ~ .error{
         display: block;
       }
     }

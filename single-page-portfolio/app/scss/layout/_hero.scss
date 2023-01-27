@@ -10,7 +10,7 @@
 
   &__content {
     display: grid;
-    gap: rem(20);
+    gap: rem(30);
     justify-items: center;
   }
 
@@ -31,6 +31,10 @@
 
     &__subtitle {
       max-width: 35ch;
+      
+      @include breakpoint(medium) {
+        font-size: rem(18);
+      }
     }
 
   }
