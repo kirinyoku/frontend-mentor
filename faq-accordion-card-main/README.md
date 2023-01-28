@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ accordion card
 
-## Preview: https://faq-according-card-main.vercel.app/
+## Preview: https://kirinyoku.github.io/frontend-mentor/faq-accordion-card-main/
 
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
