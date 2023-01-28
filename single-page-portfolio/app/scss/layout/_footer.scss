@@ -43,13 +43,13 @@
       font-family: inherit;
       text-transform: uppercase;
       color: $text-primary;
-      background-color: transparent;
+      background-color: $bg-alt;
       padding: 0 0 rem(24) rem(17);
       border-bottom: 1px solid $clr-primary-100;
       border-radius: 0;
       resize: none;
-      height: auto;
       width: 100%;
+      height: rem(46);
 
       &:focus {
         border-color: $clr-neutral-400;
