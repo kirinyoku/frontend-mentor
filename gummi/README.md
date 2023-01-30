@@ -1,2 +1,2 @@
 # Preview:
-## https://kirinyoku.github.io/frontend-mentor/single-page-portfolio/
+## https://kirinyoku.github.io/frontend-mentor/gummi/
