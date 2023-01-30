@@ -725,7 +725,7 @@ h3 {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
   justify-items: start;
 }
 
