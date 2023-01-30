@@ -1,0 +1,12 @@
+@use '../util/' as *;
+
+.container {
+	margin: 0 auto;
+	width: min(rem(1100), 100%)
+}
+
+.header {
+	text-align: center;
+	border-bottom: rem(1) solid var(--tile);
+	margin-bottom: 1em;
+}
