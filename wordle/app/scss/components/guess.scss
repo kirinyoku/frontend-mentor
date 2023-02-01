@@ -8,9 +8,43 @@
   max-width: fit-content;
   margin: 0 auto rem(7) auto;
 
+  & > div[data-animation=flip] {
+    animation-name: flip;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+  } 
+
   &__tile {
-    border: rem(1) solid var(--tile);
-    width: clamp(rem(40), rem(20) + 2.5vw, rem(80));
-    height: clamp(rem(40), rem(20) + 2.5vw, rem(80));
+    display: flex;
+    border: rem(2) solid var(--tile);
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(rem(32), rem(16) + 2vw, rem(76));
+    font-weight: 700;
+    line-height: 1;
+    width: 1.5em;
+    height: 1.5em;
+    @keyframes pop {
+      to {
+        transform: scale(1.1);
+      }
+    }
+    @keyframes flip {
+      0% {
+        transform: rotateX(0deg);
+      }
+      50% {
+        transform: rotateX(-90deg);
+      }
+      100% {
+        transform: rotateX(0deg);
+      }
+    }
+
+    &[data-animation=pop] {
+      animation-name: pop;
+      animation-duration: 100ms;
+      animation-timing-function: ease-in;
+    }
   }
 }
