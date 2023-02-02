@@ -1,0 +1,35 @@
+@use "../util/" as *;
+
+.keyboard {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  row-gap: clamp(rem(1), 0.3vw, rem(5));
+  max-width: rem(600);
+  height: fit-content;
+
+  &__row {
+    display: flex;
+    gap: clamp(rem(1), 0.3vw, rem(5));
+    touch-action: manipulation;
+    width: 100%;
+  }
+
+  &__key {
+    font-size: clamp(rem(14), rem(8) + 1vw, rem(24));
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0.5em;
+    border-radius: rem(4);
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--absent);
+    color: var(--text);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+}

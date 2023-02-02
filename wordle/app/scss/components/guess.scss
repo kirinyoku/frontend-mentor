@@ -16,10 +16,10 @@
 
   &__tile {
     display: flex;
-    border: rem(2) solid var(--tile);
+    border: rem(2) solid var(--absent);
     justify-content: center;
     align-items: center;
-    font-size: clamp(rem(32), rem(16) + 2vw, rem(76));
+    font-size: clamp(rem(24), rem(16) + 1.1vw, rem(56));
     font-weight: 700;
     line-height: 1;
     width: 1.5em;
@@ -39,6 +39,21 @@
       100% {
         transform: rotateX(0deg);
       }
+    }
+
+    &[data-state=correct] {
+      border-color: var(--correct);
+      background-color: var(--correct);
+    }
+
+    &[data-state=present] {
+      border-color: var(--present);
+      background-color: var(--present);
+    }
+
+    &[data-state=absent] {
+      border-color: var(--absent);
+      background-color: var(--absent);
     }
 
     &[data-animation=pop] {
