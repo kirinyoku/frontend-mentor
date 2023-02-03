@@ -7,6 +7,14 @@
   row-gap: clamp(rem(1), 0.3vw, rem(5));
   max-width: rem(600);
   height: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include breakpoint(medium) {
+    bottom: rem(10);
+  }
 
   &__row {
     display: flex;
@@ -16,20 +24,30 @@
   }
 
   &__key {
-    font-size: clamp(rem(14), rem(8) + 1vw, rem(24));
+    font-size: clamp(rem(16), rem(8) + 1vw, rem(24));
     font-family: inherit;
     font-weight: bold;
     border: 0;
-    padding: 0.5em;
+    padding: 0.6em 0.5em;
     border-radius: rem(4);
     cursor: pointer;
     user-select: none;
-    background-color: var(--absent);
+    background-color: var(--key);
     color: var(--text);
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    
+    &[data-state=correct] {
+      background-color: var(--correct);
+    }
+    &[data-state=present] {
+      background-color: var(--present);
+    }
+    &[data-state=absent] {
+      background-color: var(--absent);
+    }
   }
 }

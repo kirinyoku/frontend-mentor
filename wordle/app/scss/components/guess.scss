@@ -19,7 +19,7 @@
     border: rem(2) solid var(--absent);
     justify-content: center;
     align-items: center;
-    font-size: clamp(rem(24), rem(16) + 1.1vw, rem(56));
+    font-size: clamp(rem(24), rem(20) + 1.1vw, rem(56));
     font-weight: 700;
     line-height: 1;
     width: 1.5em;
@@ -60,6 +60,7 @@
       animation-name: pop;
       animation-duration: 100ms;
       animation-timing-function: ease-in;
+      border-color: var(--key);
     }
   }
 }

@@ -6,6 +6,8 @@ let tileNumber = 0;
 let currentGuess = document.querySelector(`#guess${currentGuessCount}`);
 // array of tiles in the current row of guess
 let guessTiles = document.querySelectorAll(`#guess${currentGuessCount} .guess__tile`);
+// array of keyboard keys
+const keyboardKeys = document.querySelectorAll('.keyboard__key');
 // controller for event listener 
 const controller = new AbortController();
 const { signal } = controller;
@@ -30,6 +32,10 @@ const addAnimation = (element, animName) => {
 	element.dataset.animation = animName;
 };
 
+const getKey = (letter) => {
+	return document.querySelector(`.keyboard__key[data-key=${letter}]`);
+}
+
 const typeLetter = (letter) => {
   if (tileNumber <= 4) {
 		let currentTile = guessTiles[tileNumber];
@@ -52,14 +58,19 @@ const eraseLetter = () => {
 
 const checkLetters = () => {
 	for (let i = 0; i < guessTiles.length; i++) {
-		if (guessTiles[i].textContent === words[0][i]) {
+		let letter = guessTiles[i].textContent;
+		if (letter === words[0][i]) {
 			guessTiles[i].dataset.state = 'correct';
-		} else if (words[0].includes(guessTiles[i].textContent)) {
+			getKey(letter).dataset.state = 'correct';
+		} else if (words[0].includes(letter)) {
 			guessTiles[i].dataset.state = 'present';
+			getKey(letter).dataset.state = 'present';
 		} else {
 			guessTiles[i].dataset.state = 'absent';
+			getKey(letter).dataset.state = 'absent';
 		};
 		addAnimation(guessTiles[i].parentElement, 'flip');
+		addAnimation(guessTiles[i], 'idle');
 	};
 };
 
@@ -114,3 +125,16 @@ document.addEventListener('keydown', (e) => {
 		submitGuess();
 	};
 }, { signal });
+
+for (let i = 0; i < keyboardKeys.length; i++) {
+	keyboardKeys[i].addEventListener('click', (e) => {
+		let dataKey = e.currentTarget.dataset.key;
+		if (dataKey.length === 1 && letterPattern.test(dataKey)) {
+			typeLetter(dataKey);
+		} else if (dataKey === 'Backspace') {
+			eraseLetter();
+		} else if (dataKey === 'Enter' && tileNumber === 5 && currentGuessCount <= 6) {
+			submitGuess();
+		};
+	});
+}

@@ -9,9 +9,9 @@ h3 {
 
 h1 {
 	font-size: 2rem;
-	font-size: clamp(1.5rem, 1.5rem + 2vw, 3.2rem);
-	padding-block: 0.15em;		
+	font-size: clamp(1.5rem, 1.5rem + 2vw, 3.2rem);	
 	line-height: 1;
+	padding-block: rem(10);
 }
 
 a,

@@ -7,11 +7,6 @@
 
 .header {
 	text-align: center;
+	margin-bottom: 4em;
 	border-bottom: rem(1) solid var(--absent);
-	margin-bottom: 1em;
-}
-
-.main {
-	display: grid;
-	row-gap: rem(100);
 }
