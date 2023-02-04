@@ -8,13 +8,41 @@ let currentGuess = document.querySelector(`#guess${currentGuessCount}`);
 let guessTiles = document.querySelectorAll(`#guess${currentGuessCount} .guess__tile`);
 // array of keyboard keys
 const keyboardKeys = document.querySelectorAll('.keyboard__key');
+// element for display result
+const result = document.querySelector('.result__info');
 // controller for event listener 
 const controller = new AbortController();
 const { signal } = controller;
 // regular expression to test a string for a letter
 const letterPattern = /^[A-Za-z][A-Za-z0-9]*$/;
 
-const words = ['cream'];
+// list of words for guess
+let words = [];
+
+const guessWord = (data) => {
+	const randomItem = Math.floor(Math.random() * (data.length - 1)) + 1;
+	localStorage.setItem('solution', data[randomItem]);
+}
+
+const getSolution = () => {
+	fetch('../words.json')
+	.then(function(res) {
+		return res.json();
+	})
+	.then(function(data) {
+		guessWord(data);
+	})
+}
+
+const getWords = () => {
+	fetch('../words.json')
+	.then(function(res) {
+		return res.json();
+	})
+	.then(function(data) {
+		words = data;
+	})
+} 
 
 // adding animation-delay to the tile wrappers (to animate the flipping of tiles)
 const addAnimDelay = () => {
@@ -59,10 +87,10 @@ const eraseLetter = () => {
 const checkLetters = () => {
 	for (let i = 0; i < guessTiles.length; i++) {
 		let letter = guessTiles[i].textContent;
-		if (letter === words[0][i]) {
+		if (letter === localStorage.getItem('solution')[i]) {
 			guessTiles[i].dataset.state = 'correct';
 			getKey(letter).dataset.state = 'correct';
-		} else if (words[0].includes(letter)) {
+		} else if (localStorage.getItem('solution').includes(letter)) {
 			guessTiles[i].dataset.state = 'present';
 			getKey(letter).dataset.state = 'present';
 		} else {
@@ -75,15 +103,20 @@ const checkLetters = () => {
 };
 
 const checkGuess = () => {
-	if (currentGuess.dataset.guess === words[0] || currentGuessCount === 6) {
-		// remove event listener from document
+	if (currentGuess.dataset.guess === localStorage.getItem('solution')) {
 		controller.abort();
+		localStorage.clear();
+		result.textContent = 'You guessed the word! 🥳';
+	} else if (currentGuessCount === 6) {
+		controller.abort();
+		result.textContent = localStorage.getItem('solution');
 		localStorage.clear();
 	} else {
 		tileNumber = 0;
 		currentGuessCount += 1;
 		currentGuess = document.querySelector(`#guess${currentGuessCount}`);
 		guessTiles = document.querySelectorAll(`#guess${currentGuessCount} .guess__tile`);
+		result.textContent = '';
 	};
 }
 
@@ -96,13 +129,26 @@ const addGuessToStorage = () => {
 }
 
 const submitGuess = () => {
-	checkLetters();
-	addGuessToData();
-	addGuessToStorage();
-	checkGuess();
+	if (words.includes(currentGuess.dataset.letters)) {
+		checkLetters();
+		addGuessToData();
+		addGuessToStorage();
+		checkGuess();
+	} else {
+		addAnimation(currentGuess, 'shake');
+		result.textContent = 'isn\'t a word';
+		setTimeout(() => {
+			addAnimation(currentGuess, 'idle');
+			result.textContent = '';
+		}, 600)
+	}
 };
 
 window.addEventListener("load", () => {
+	if (!localStorage.getItem("solution")) {
+		getSolution();
+	}
+	getWords();
 	addAnimDelay();
 	if (localStorage.getItem("guess")?.length > 0) {
 		for (let i = 1; i <= localStorage.getItem("guess").split(',').join('').length; i++){

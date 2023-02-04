@@ -8,6 +8,7 @@
   "dependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
+    "@fontsource/clear-sans": "^4.5.3",
     "autoprefixer": "^10.2.6",
     "browser-sync": "^2.27.4",
     "cssnano": "^5.0.6",
