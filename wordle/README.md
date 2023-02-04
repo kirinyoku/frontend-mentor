@@ -1,2 +1,2 @@
 # Preview:
-## https://kirinyoku.github.io/frontend-mentor/wordle
+## https://wordle-navy.vercel.app/
