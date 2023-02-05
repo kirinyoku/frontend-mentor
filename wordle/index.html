@@ -9,11 +9,53 @@
 		<script defer src="./dist/script.js"></script>
 	</head>
 	<body>
+		<dialog class="modal" id="help">
+			<div class="modal__content">
+				<h2 class="modal__title">How To Play</h2>
+				<button class="modal__close" type="button">
+					<img src="./images/close.svg" alt="close-button">
+				</button>
+				<p class="modal__subtitle">Guess the Wordle in 6 tries.</p>
+				<section class="modal__help">
+					<ul class="modal__list" role="list">
+						<li>Each guess must be a valid 5-letter word.</li>
+						<li>The color of the tiles will change to show how close your guess was to the word.</li>
+					</ul>
+					<div class="modal__example">
+						<h3>Examples</h3>
+						<div class="guess">
+							<div class="guess__tile" data-state="correct">w</div>
+							<div class="guess__tile">e</div>
+							<div class="guess__tile">a</div>
+							<div class="guess__tile">r</div>
+							<div class="guess__tile">y</div>
+						</div>
+						<p><b>W</b> is in the word and in the correct spot.</p>
+						<div class="guess">
+							<div class="guess__tile">p</div>
+							<div class="guess__tile" data-state="present">i</div>
+							<div class="guess__tile">l</div>
+							<div class="guess__tile">l</div>
+							<div class="guess__tile">s</div>
+						</div>
+						<p><b>I</b> is in the word but in the wrong spot.</p>
+						<div class="guess">
+							<div class="guess__tile">v</div>
+							<div class="guess__tile">a</div>
+							<div class="guess__tile">g</div>
+							<div class="guess__tile" data-state="absent">u</div>
+							<div class="guess__tile">e</div>
+						</div>
+						<p><b>U</b> is not in the word in any spot.</p>
+					</div>
+				</section>
+			</div>
+		</dialog>
 		<header id="header">
 			<div class="header container">
 				<div aria-hidden="true"></div>
 				<h1 class="header__title">Wordle</h1>
-				<nav>
+				<nav class="header__navigation">
 					<ul class="header__navigation-list">
 						<li>
 							<button class="header__button" id="help-button">

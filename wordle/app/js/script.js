@@ -13,6 +13,9 @@ const result = document.querySelector('.result__info');
 // header navigation buttons
 const helpButton = document.querySelector('#help-button');
 const refreshButton = document.querySelector('#refresh-button');
+// help menu 
+const helpMenu = document.querySelector('#help');
+const helpMenuClose = document.querySelector('.modal__close > img');
 // controller for event listener 
 const controller = new AbortController();
 const { signal } = controller;
@@ -147,6 +150,19 @@ const submitGuess = () => {
 	}
 };
 
+const openHelp = () => {
+	helpMenu.style.display = 'flex';
+}
+
+const closeHelp = () => {
+	helpMenu.style.display = 'none';
+}
+
+const refreshGame = () => {
+	localStorage.clear();
+	location.reload();
+}
+
 window.addEventListener("load", () => {
 	if (!localStorage.getItem("solution")) {
 		getSolution();
@@ -163,6 +179,18 @@ window.addEventListener("load", () => {
 			}
 		}
 	}
+	refreshButton.addEventListener('click', () => {
+		refreshGame();
+	})
+	helpButton.addEventListener('click', () => {
+		openHelp();
+	})
+	helpMenu.addEventListener('click', (e) => {
+		console.log(e.target)
+		if (e.target === helpMenu || e.target === helpMenuClose) {
+			closeHelp();
+		}
+	})
 });
 
 document.addEventListener('keydown', (e) => {

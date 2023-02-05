@@ -19,7 +19,6 @@ body {
 	color: var(--text);
 	background-color: var(--bg);
 	font-family: var(--font-body);
-	text-transform: uppercase;
 	min-height: 100vh;
 	min-height: 100dvh;
 	min-height: -webkit-fill-available;
@@ -29,6 +28,10 @@ ul, ol {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+ul[role=list] {
+	list-style: disc;
 }
 
 header {

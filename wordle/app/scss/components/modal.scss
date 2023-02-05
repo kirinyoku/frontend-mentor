@@ -1,0 +1,82 @@
+@use '../util/' as *;
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
+  &__content {
+    position: relative;
+    border-radius: rem(8);
+    background-color: var(--bg-modal);
+    color: var(--text);
+    box-shadow: 0 rem(4) rem(23) 0 rgb(0 0 0 / 20%);
+    width: 90%;
+    max-height: 100%;
+    overflow-y: rem(500);
+    max-width: min(rem(500), 90%);
+    padding: rem(20);
+    z-index: 3;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: clamp(rem(24), rem(16) + 1vw, rem(36));
+  }
+
+  &__subtitle {
+    font-size: clamp(rem(14), rem(16) + 1vw, rem(20));
+    margin-block: 0.5em;
+  }
+
+  &__list {
+    font-size: clamp(rem(12), rem(12) + 1vw, rem(18));
+    max-width: 45ch;
+    margin-bottom: 0.5em;
+    line-height: rem(20);
+    padding-inline-start: rem(20);
+
+    li {
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__example {
+    margin-top: rem(15);
+    border-bottom: rem(1) solid var(--text);
+
+    h3 {
+      font-size: clamp(rem(14), rem(16) + 1vw, rem(20));
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-top: 0.5em;
+    }
+  }
+
+  &__close {
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+    width: rem(24);
+    height: rem(24);
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+  }
+
+  .guess {
+    margin: 0;
+  }
+}
