@@ -1,0 +1,21 @@
+@use '../util/' as *;
+
+.header {
+  display: grid;
+  grid-template-columns: rem(75) 1fr rem(70);
+  align-items: center;
+  text-align: center;
+
+  &__navigation-list {
+    display: flex;
+    gap: rem(12);
+    height: rem(24);
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}

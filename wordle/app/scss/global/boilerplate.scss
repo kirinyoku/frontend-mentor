@@ -1,4 +1,6 @@
-html {
+@use '../util/' as *;
+
+tml {
 	font-size: 100%;
 	box-sizing: border-box;
 	height: -webkit-fill-available;
@@ -21,4 +23,15 @@ body {
 	min-height: 100vh;
 	min-height: 100dvh;
 	min-height: -webkit-fill-available;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+header {
+	margin-bottom: 4em;
+	border-bottom: rem(1) solid var(--absent);
 }

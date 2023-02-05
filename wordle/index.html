@@ -9,8 +9,25 @@
 		<script defer src="/dist/script.js"></script>
 	</head>
 	<body>
-		<header id="header" class="header">
-			<h1 class="header__title container">Wordle</h1>
+		<header id="header">
+			<div class="header container">
+				<div aria-hidden="true"></div>
+				<h1 class="header__title">Wordle</h1>
+				<nav>
+					<ul class="header__navigation-list">
+						<li>
+							<button class="header__button" id="help-button">
+								<img src="./images/help.svg" alt="game-help-icon">
+							</button>
+						</li>
+						<li>
+							<button class="header__button" id="refresh-button">
+								<img src="./images/refresh.svg" alt="game-refresh-icon">
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 		<main class="main">
 			<section class="game container">

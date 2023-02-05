@@ -10,6 +10,9 @@ let guessTiles = document.querySelectorAll(`#guess${currentGuessCount} .guess__t
 const keyboardKeys = document.querySelectorAll('.keyboard__key');
 // element for display result
 const result = document.querySelector('.result__info');
+// header navigation buttons
+const helpButton = document.querySelector('#help-button');
+const refreshButton = document.querySelector('#refresh-button');
 // controller for event listener 
 const controller = new AbortController();
 const { signal } = controller;

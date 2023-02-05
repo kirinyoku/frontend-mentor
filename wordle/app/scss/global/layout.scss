@@ -2,11 +2,5 @@
 
 .container {
 	margin: 0 auto;
-	width: min(rem(1100), 100%)
-}
-
-.header {
-	text-align: center;
-	margin-bottom: 4em;
-	border-bottom: rem(1) solid var(--absent);
+	width: min(rem(1100), 100%);
 }
