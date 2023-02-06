@@ -9,10 +9,10 @@
 		<script defer src="./dist/script.js"></script>
 	</head>
 	<body>
-		<dialog class="modal" id="help">
+		<dialog class="modal" id="help" aria-label="help modal" aria-hidden="true">
 			<div class="modal__content">
 				<h2 class="modal__title">How To Play</h2>
-				<button class="modal__close" type="button">
+				<button class="modal__close" type="button" aria-label="close">
 					<img src="./images/close.svg" alt="close-button">
 				</button>
 				<p class="modal__subtitle">Guess the Wordle in 6 tries.</p>
@@ -23,7 +23,7 @@
 					</ul>
 					<div class="modal__example">
 						<h3>Examples</h3>
-						<div class="guess">
+						<div class="guess" aria-label="weary">
 							<div class="guess__tile" data-state="correct">w</div>
 							<div class="guess__tile">e</div>
 							<div class="guess__tile">a</div>
@@ -31,7 +31,7 @@
 							<div class="guess__tile">y</div>
 						</div>
 						<p><b>W</b> is in the word and in the correct spot.</p>
-						<div class="guess">
+						<div class="guess" aria-label="pills">
 							<div class="guess__tile">p</div>
 							<div class="guess__tile" data-state="present">i</div>
 							<div class="guess__tile">l</div>
@@ -39,7 +39,7 @@
 							<div class="guess__tile">s</div>
 						</div>
 						<p><b>I</b> is in the word but in the wrong spot.</p>
-						<div class="guess">
+						<div class="guess" aria-label="vague">
 							<div class="guess__tile">v</div>
 							<div class="guess__tile">a</div>
 							<div class="guess__tile">g</div>
@@ -51,168 +51,166 @@
 				</section>
 			</div>
 		</dialog>
-		<header id="header">
-			<div class="header container">
+		<header id="header" aria-label="primary header">
+			<div class="header">
 				<div aria-hidden="true"></div>
-				<h1 class="header__title">Wordle</h1>
-				<nav class="header__navigation">
-					<ul class="header__navigation-list">
-						<li>
-							<button class="header__button" id="help-button">
-								<img src="./images/help.svg" alt="game-help-icon">
-							</button>
-						</li>
-						<li>
-							<button class="header__button" id="refresh-button">
-								<img src="./images/refresh.svg" alt="game-refresh-icon">
-							</button>
-						</li>
-					</ul>
-				</nav>
+				<h1 class="header__title" aria-label="primary heading">Wordle</h1>
+				<menu class="header__menu">
+					<li>
+						<button class="header__button" id="help-button" aria-label="help">
+							<img src="./images/help.svg" alt="game-help-icon">
+						</button>
+					</li>
+					<li>
+						<button class="header__button" id="refresh-button" aria-label="refresh game">
+							<img src="./images/refresh.svg" alt="game-refresh-icon">
+						</button>
+					</li>
+				</menu>
 			</div>
 		</header>
 		<main class="main">
-			<section class="game container">
-				<div class="guess" id="guess1" data-letters="" data-guess="">
+			<section class="game container" aria-label="game field">
+				<div class="guess" id="guess1" data-letters="" data-guess="" aria-label="row 1" role="group">
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
-					</div>
-				</div>
-				<div class="guess" id="guess2" data-letters="" data-guess="">
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 				</div>
-				<div class="guess" id="guess3" data-letters="" data-guess="">
+				<div class="guess" id="guess2" data-letters="" data-guess="" aria-label="row 2" role="group">
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
-					</div>
-				</div>
-				<div class="guess" id="guess4" data-letters="" data-guess="">
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
-					</div>
-					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 				</div>
-				<div class="guess" id="guess5" data-letters="" data-guess="">
+				<div class="guess" id="guess3" data-letters="" data-guess="" aria-label="row 3" role="group">
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 				</div>
-				<div class="guess" id="guess6" data-letters="" data-guess="">
+				<div class="guess" id="guess4" data-letters="" data-guess="" aria-label="row 4" role="group">
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 					<div>
-						<div class="guess__tile"></div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+				</div>
+				<div class="guess" id="guess5" data-letters="" data-guess="" aria-label="row 5" role="group">
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+				</div>
+				<div class="guess" id="guess6" data-letters="" data-guess="" aria-label="row 6" role="group">
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
+					</div>
+					<div>
+						<div class="guess__tile" aria-label="empty" role="img" aria-roledescription="tile"></div>
 					</div>
 				</div>
 			</section>
-			<section class="result">
-				<p class="result__info"></p>
+			<section class="result" aria-label="game result">
+				<p class="result__info" aria-label="result info"></p>
 			</section>
-			<section class="keyboard container">
-				<div class="keyboard__row">
-					<button class="keyboard__key" type="button" data-key="q">q</button>
-					<button class="keyboard__key" type="button" data-key="w">w</button>
-					<button class="keyboard__key" type="button" data-key="e">e</button>
-					<button class="keyboard__key" type="button" data-key="r">r</button>
-					<button class="keyboard__key" type="button" data-key="t">t</button>
-					<button class="keyboard__key" type="button" data-key="y">y</button>
-					<button class="keyboard__key" type="button" data-key="u">u</button>
-					<button class="keyboard__key" type="button" data-key="i">i</button>
-					<button class="keyboard__key" type="button" data-key="o">o</button>
-					<button class="keyboard__key" type="button" data-key="p">p</button>
+			<section class="keyboard container" aria-label="virtual keyboard">
+				<div class="keyboard__row" aria-label="keyboard row 1">
+					<button class="keyboard__key" type="button" aria-label="q" data-key="q">q</button>
+					<button class="keyboard__key" type="button" aria-label="w" data-key="w">w</button>
+					<button class="keyboard__key" type="button" aria-label="e" data-key="e">e</button>
+					<button class="keyboard__key" type="button" aria-label="r" data-key="r">r</button>
+					<button class="keyboard__key" type="button" aria-label="t" data-key="t">t</button>
+					<button class="keyboard__key" type="button" aria-label="y" data-key="y">y</button>
+					<button class="keyboard__key" type="button" aria-label="u" data-key="u">u</button>
+					<button class="keyboard__key" type="button" aria-label="i" data-key="i">i</button>
+					<button class="keyboard__key" type="button" aria-label="o" data-key="o">o</button>
+					<button class="keyboard__key" type="button" aria-label="p" data-key="p">p</button>
 				</div>
-				<div class="keyboard__row">
-					<button class="keyboard__key" type="button" data-key="a">a</button>
-					<button class="keyboard__key" type="button" data-key="s">s</button>
-					<button class="keyboard__key" type="button" data-key="d">d</button>
-					<button class="keyboard__key" type="button" data-key="f">f</button>
-					<button class="keyboard__key" type="button" data-key="g">g</button>
-					<button class="keyboard__key" type="button" data-key="h">h</button>
-					<button class="keyboard__key" type="button" data-key="j">j</button>
-					<button class="keyboard__key" type="button" data-key="k">k</button>
-					<button class="keyboard__key" type="button" data-key="l">l</button>
+				<div class="keyboard__row" aria-label="keyboard row 2">
+					<button class="keyboard__key" type="button" aria-label="a" data-key="a">a</button>
+					<button class="keyboard__key" type="button" aria-label="s" data-key="s">s</button>
+					<button class="keyboard__key" type="button" aria-label="d" data-key="d">d</button>
+					<button class="keyboard__key" type="button" aria-label="f" data-key="f">f</button>
+					<button class="keyboard__key" type="button" aria-label="g" data-key="g">g</button>
+					<button class="keyboard__key" type="button" aria-label="h" data-key="h">h</button>
+					<button class="keyboard__key" type="button" aria-label="j" data-key="j">j</button>
+					<button class="keyboard__key" type="button" aria-label="k" data-key="k">k</button>
+					<button class="keyboard__key" type="button" aria-label="l" data-key="l">l</button>
 				</div>
-				<div class="keyboard__row">
-					<button class="keyboard__key" type="button" data-key="Enter">enter</button>
-					<button class="keyboard__key" type="button" data-key="z">z</button>
-					<button class="keyboard__key" type="button" data-key="x">x</button>
-					<button class="keyboard__key" type="button" data-key="c">c</button>
-					<button class="keyboard__key" type="button" data-key="v">v</button>
-					<button class="keyboard__key" type="button" data-key="b">b</button>
-					<button class="keyboard__key" type="button" data-key="n">n</button>
-					<button class="keyboard__key" type="button" data-key="m">m</button>
-					<button class="keyboard__key" type="button" data-key="Backspace">
+				<div class="keyboard__row" aria-label="keyboard row 2">
+					<button class="keyboard__key" type="button" aria-label="Enter" data-key="Enter">enter</button>
+					<button class="keyboard__key" type="button" aria-label="z" data-key="z">z</button>
+					<button class="keyboard__key" type="button" aria-label="x" data-key="x">x</button>
+					<button class="keyboard__key" type="button" aria-label="c" data-key="c">c</button>
+					<button class="keyboard__key" type="button" aria-label="v" data-key="v">v</button>
+					<button class="keyboard__key" type="button" aria-label="b" data-key="b">b</button>
+					<button class="keyboard__key" type="button" aria-label="n" data-key="n">n</button>
+					<button class="keyboard__key" type="button" aria-label="m" data-key="m">m</button>
+					<button class="keyboard__key" type="button" aria-label="Backspace" data-key="Backspace">
 						<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-backspace">
 							<path fill="var(--text)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
 						</svg>

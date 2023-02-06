@@ -16,6 +16,7 @@ const refreshButton = document.querySelector('#refresh-button');
 // help menu 
 const helpMenu = document.querySelector('#help');
 const helpMenuClose = document.querySelector('.modal__close > img');
+const helpGuessTiles = document.querySelectorAll('.modal__example .guess__tile[data-state]');
 // controller for event listener 
 const controller = new AbortController();
 const { signal } = controller;
@@ -75,6 +76,7 @@ const typeLetter = (letter) => {
 		let currentTile = guessTiles[tileNumber];
     addAnimation(currentTile, 'pop');
     currentTile.textContent = letter;
+		currentTile.ariaLabel = letter;
     currentGuess.dataset.letters += letter;
     tileNumber += 1;
   };
@@ -85,6 +87,7 @@ const eraseLetter = () => {
 		tileNumber -= 1;
 		let currentTile = guessTiles[tileNumber];
 		currentTile.textContent = '';
+		currentTile.ariaLabel = 'empty';
 		currentTile.dataset.animation = 'idle';
 		currentGuess.dataset.letters = currentGuess.dataset.letters.slice(0, -1);
 	};
@@ -152,10 +155,20 @@ const submitGuess = () => {
 
 const openHelp = () => {
 	helpMenu.style.display = 'flex';
+	helpMenu.ariaHidden = 'false';
+	helpMenu.open = true;
+	for (let i = 0; i < helpGuessTiles.length; i++) {
+		addAnimation(helpGuessTiles[i], 'flip');
+	}
 }
 
 const closeHelp = () => {
 	helpMenu.style.display = 'none';
+	helpMenu.ariaHidden = 'true';
+	helpMenu.open = false;
+	for (let i = 0; i < helpGuessTiles.length; i++) {
+		addAnimation(helpGuessTiles[i], 'idle');
+	}
 }
 
 const refreshGame = () => {
@@ -186,7 +199,6 @@ window.addEventListener("load", () => {
 		openHelp();
 	})
 	helpMenu.addEventListener('click', (e) => {
-		console.log(e.target)
 		if (e.target === helpMenu || e.target === helpMenuClose) {
 			closeHelp();
 		}

@@ -3,17 +3,14 @@
 .header {
   display: grid;
   grid-template-columns: rem(75) 1fr rem(70);
-  align-items: center;
+  padding-inline: rem(15);
   text-align: center;
 
-  &__navigation {
+  &__menu {
     display: flex;
     align-items: center;
+    justify-content: end;
     height: 100%;
-  }
-
-  &__navigation-list {
-    display: flex;
     gap: rem(12);
   }
 
