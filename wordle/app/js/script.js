@@ -116,9 +116,11 @@ const checkGuess = () => {
 		controller.abort();
 		localStorage.clear();
 		result.textContent = 'You guessed the word! 🥳';
+		result.ariaHidden = 'false';
 	} else if (currentGuessCount === 6) {
 		controller.abort();
 		result.textContent = localStorage.getItem('solution');
+		result.ariaHidden = 'false';
 		localStorage.clear();
 	} else {
 		tileNumber = 0;
@@ -126,6 +128,7 @@ const checkGuess = () => {
 		currentGuess = document.querySelector(`#guess${currentGuessCount}`);
 		guessTiles = document.querySelectorAll(`#guess${currentGuessCount} .guess__tile`);
 		result.textContent = '';
+		result.ariaHidden = 'true';
 	};
 }
 
