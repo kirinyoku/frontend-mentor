@@ -115,6 +115,9 @@ const checkGuess = () => {
 	if (currentGuess.dataset.guess === localStorage.getItem('solution')) {
 		controller.abort();
 		localStorage.clear();
+		for (let i = 0; i < currentGuess.children.length; i++) {
+			addAnimation(currentGuess.children[i], 'jump');
+		}
 		result.textContent = 'You guessed the word! 🥳';
 		result.ariaHidden = 'false';
 	} else if (currentGuessCount === 6) {

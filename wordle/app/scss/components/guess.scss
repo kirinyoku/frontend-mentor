@@ -27,6 +27,18 @@
     }
   }
 
+  @keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(rem(-30));
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   &[data-animation=shake] {
     animation-name: shake;
     animation-duration: 600ms;
@@ -38,6 +50,11 @@
     animation-timing-function: ease-in-out;
   } 
 
+  & > div[data-animation=jump] {
+    animation-name: jump;
+    animation-duration: 250ms;
+    animation-timing-function: ease-out;
+  }
 
   &__tile {
     display: flex;
