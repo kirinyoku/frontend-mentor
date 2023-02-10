@@ -2,8 +2,8 @@
 
 .header {
   display: grid;
-  grid-template-columns: rem(75) 1fr rem(70);
-  padding-inline: rem(15);
+  grid-template-columns: rem(75) 1fr rem(75);
+  padding-inline: rem(10);
   text-align: center;
 
   &__menu {
