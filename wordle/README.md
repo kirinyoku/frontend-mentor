@@ -1,4 +1,4 @@
-# Demo](https://wordle-navy.vercel.app/)
+# [Demo](https://wordle-navy.vercel.app/)
 ## Wordle
 ## How To Play 
 Guess the Wordle in 6 tries.
