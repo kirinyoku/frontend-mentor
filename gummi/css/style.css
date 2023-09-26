@@ -680,6 +680,24 @@ h3 {
   }
 }
 
+/* Location Section */
+
+.location {
+  width: min(1110px, 100% - 2rem);
+  margin-inline: auto;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.location-frame {
+  width: min(1240px, 95dvw);
+  height: min(500px, 50dvh);
+  border: none;
+}
+
 /* Download section */
 
 .download {
